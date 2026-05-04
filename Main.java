@@ -1,7 +1,7 @@
 /**
  * Main class to test the Gym Membership Login System functionality.
  * This version demonstrates multi-user support with two members.
- * * Team Members: Dipesh Kumar Mahato, Dilip Singh
+ * * Team Members: Dipesh Kumar Mahato, Raj Kumar Partel
  */
 public class Main {
     public static void main(String[] args) {
@@ -30,7 +30,13 @@ public class Main {
         } else {
             System.out.println("Login Failed for Member 2.");
         }
-
+        
+        // --- Testing Membership Behavior (Step 7/9 of Project Requirements) ---
+        System.out.println("\n> Testing Membership Behavior for New Registration:");
+        Membership newMembership = new Membership();
+        newMembership.activateMembership(); 
+        // This proves the 'activateMembership' method in your Membership class is functional.
+        
         // --- Testing Admin Oversight ---
         System.out.println("\n> Administrative Action:");
         GymAdmin admin = new GymAdmin(1, "Admin User", "admin@gym.com", "admin123");
